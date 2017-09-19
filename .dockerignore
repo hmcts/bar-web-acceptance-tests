@@ -1,0 +1,8 @@
+*
+
+!package.json
+!yarn.lock
+
+!codecept.conf.js
+!proxy-settings.js
+!test/**

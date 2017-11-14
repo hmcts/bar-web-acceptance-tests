@@ -2,14 +2,14 @@
 @Library("Reform") _
 
 properties([
-        [$class: 'GithubProjectProperty', displayName: 'Fees Register Admin Web acceptance tests', projectUrlStr: 'https://git.reform.hmcts.net/fees-register/fees-register-admin-web-acceptance-tests'],
+        [$class: 'GithubProjectProperty', displayName: 'BAR Web acceptance tests', projectUrlStr: 'https://git.reform.hmcts.net/bar/bar-web-acceptance-tests'],
         parameters([
-                string(defaultValue: 'latest', description: 'fees-admin-web Docker Version', name: 'feesAdminWebDockerVersion')
+                string(defaultValue: 'latest', description: 'bar-web Docker Version', name: 'barWebDockerVersion')
         ])
 ])
 
 
-lock('Fees Register Admin Web acceptance tests') {
+lock('BAR Web Acceptance Tests') {
     node {
         try {
             stage('Checkout') {
@@ -23,11 +23,11 @@ lock('Fees Register Admin Web acceptance tests') {
 
             try {
                 stage('Start Docker Images') {
-                    env.FEES_ADMIN_WEB_DOCKER_VERSION = params.feesAdminWebDockerVersion
+                    env.BAR_WEB_DOCKER_VERSION = params.barWebDockerVersion
 
                     sh 'docker-compose build'
                     sh 'docker-compose pull'
-                    sh 'docker-compose up -d fees-admin-web remote-webdriver'
+                    sh 'docker-compose up -d bar-web remote-webdriver'
                 }
 
                 stage('Run acceptance tests') {

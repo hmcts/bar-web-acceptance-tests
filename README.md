@@ -1,4 +1,4 @@
-# Fees Register Admin Web Acceptance Tests
+# BAR Web Acceptance Tests
 
 ## Running tests 
 
@@ -10,10 +10,10 @@ To run tests the same they as they are run on the build server execute command:
 
 1. Execute the following command to start local testing infrastructure:
 
-   `docker-compose -f docker-compose.yml -f docker-compose.local.yml up -d fees-admin-web`
+   `docker-compose -f docker-compose.yml -f docker-compose.local.yml up -d bar-web`
       
    Once it is up and running you'll have access the following access:
-   - Fees Register Admin Console on https://localhost:3415
+   - bar on https://localhost:3415
    - IDAM Authentication Application on https://localhost:3001
    - IDAM API on http://localhost:4551
    

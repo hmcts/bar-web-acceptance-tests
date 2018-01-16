@@ -2,7 +2,7 @@
 @Library("Reform") _
 
 properties([
-        [$class: 'GithubProjectProperty', displayName: 'BAR Web acceptance tests', projectUrlStr: 'https://git.reform.hmcts.net/bar/bar-web-acceptance-tests'],
+        [$class: 'GithubProjectProperty', displayName: 'BAR Web acceptance tests', projectUrlStr: 'https://github.com/hmcts/bar-web-acceptance-tests'],
         parameters([
                 string(defaultValue: 'latest', description: 'bar-web Docker Version', name: 'barWebDockerVersion')
         ])

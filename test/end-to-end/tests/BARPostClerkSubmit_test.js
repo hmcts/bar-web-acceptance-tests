@@ -1,23 +1,21 @@
-Feature('BAR Home Screen')
+Feature('BAR Post Clerk Submit Payment Instruction')
 
 Before((I, Idam) => {
-    I.amOnPage('/login')
-    I.see('BAR')
-    I.click({css: '[type="submit"]'})
-    I.see("Add payment instruction")
+    I.amOnPage('/');
+    I.resizeWindow(1600, 1200);
+    I.login('i118030@nwytg.com', 'LevelAt12');
+    I.waitForText('Add Payment Instruction', 10);
+   // I.addMochawesomeContext('simple string');
 })
 
-Scenario('Login Screen', (I) => {
-    I.getWelcomePage()
+Scenario('Select Payment Type Card', (I) => {
+    I.paymentTypeCard();
 })
 
-Scenario('Add Payment Instruction', (I) => {
-    I.seeElement('.button.button-blue');
-    I.click({css: '#part-remission'})
-    I.seeElement('.button.button-blue.view-payment-log-disabled');
+Scenario('Submit Card Payment', (I) => {
+    I.submitAllPaymentInformation();
 })
-
-Scenario('View Payments Log Validations', (I) => {
+/*Scenario('View Payments Log Validations', (I) => {
     I.seeElement('.button.button-blue');
 I.click({css: '#payment-type-1'})
 I.click({css: '#payment-type-2'})
@@ -39,4 +37,4 @@ Scenario('View Payments Log Validations With Amount', (I) => {
     I.seeElement('.button.button-blue');
 I.fillField('#amount', '123456');
 I.seeElement('.button.button-blue.view-payment-log-disabled');
-})
+})*/

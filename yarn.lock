@@ -2825,9 +2825,10 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-yarn@^1.0.2:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.4.0.tgz#d54fa1e2db761c3527983ff40cf1442e69642abd"
+yarn@^1.22.10:
+  version "1.22.10"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+  integrity sha512-IanQGI9RRPAN87VGTF7zs2uxkSyQSrSPsju0COgbsKQOOXr5LtcVPeyXWgwVa0ywG3d8dg6kSYKGBuYK021qeA==
 
 yauzl@2.4.1:
   version "2.4.1"
